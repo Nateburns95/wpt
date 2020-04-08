@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<title>CSS Filters: blur with clip</title>
+<link rel="author" title="Xianzhu Wang" href="wangxianzhu@chromium.org">
+<link rel="help" href="https://drafts.fxtf.org/filter-effects-1/#supported-filter-functions">
+<link rel="help" href="https://crbug.com/809102">
+<link rel="match" href="reference/clip-under-filter-001-ref.html">
+<meta name="assert" content="Check that there is a blurred rectangle, left half blue and right half green."/>
+
+<div style="filter: blur(10px)">
+  <div style="position: relative; width: 100px; height: 100px; background: blue; overflow: hidden">
+    <div style="position: absolute; width: 100px; height: 100px; right: -50px; background: green"></div>
+  </div>
+</div>
